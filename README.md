@@ -11,11 +11,6 @@ library and the Google Places API specification have been removed for concisenes
 it is imperative that you update ASAP to ensure your applications continue to work.**
 
 
-Walker Crouse is an aspiring software developer, open source contributor, and starving college student. If you like my
-projects, please consider donating a small amount so that I may continue to devote time to them. Thank you.
-
-[![Donate](https://www.paypalobjects.com/en_US/i/btn/btn_donate_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=BR4TEJ4R39SFY&lc=US&item_name=Walker%20Crouse&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donate_LG%2egif%3aNonHosted)
-
 
 ## Contents
 
@@ -35,7 +30,6 @@ projects, please consider donating a small amount so that I may continue to devo
 * [Autocomplete](#autocomplete)
     * [Place prediction](#place-prediction)
     * [Query prediction](#query-prediction)
-* [Android integration](#android-integration)
 * [Documentation](#documentation)
 * [Build](#build)
 
@@ -291,22 +285,6 @@ You can also receive auto-complete predictions for Places with general queries s
 ```java
 List<Prediction> predictions = client.getQueryPredictions("pizza in New York");
 ```
-
-## Android integration
-
-Just remember that if you are using this library with Android you should never execute network code on the main thread.
-Either run it in another thread...
-
-```java
-new Thread(new Runnable() {
-    public void run() {
-        // do something
-    }
-}).start();
-```
-
-...or run it in an [AsyncTask](http://developer.android.com/reference/android/os/AsyncTask.html).
-
 
 ## Documentation
 
